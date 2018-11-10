@@ -19,33 +19,21 @@
 </head>
 
 <body>
-	<audio preload="preload" id="car_audio" src="js/bgm.mp3" loop=""></audio>
-<script>
-    setTimeout(function(){
-        $(window).scrollTop(1);
-    },0);
- 
-    /*音乐*/
- var audio = $('#car_audio');
-    var isPlaying = false;
-    function playAudio() {
-        var audio = $('#car_audio');
-        if (audio.attr('src') == undefined) {
-            audio.attr('src', audio.data('src'));
-        }
-        audio[0].play();
-        isPlaying = true;
-    }
-    $(function(){
-        playAudio();
-        document.addEventListener("WeixinJSBridgeReady", function () {
-            WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-                network = e.err_msg.split(":")[1];  //结果在这里
- playAudio();
-            });
-        }, false);
-    })
-</script>
+<audio src="js/bgm.mp3" id="Jaudio" class="media-audio" autoplay preload loop="loop"></audio>
+        </div>
+        <script type="text/javascript">
+            function audioAutoPlay(id){
+                var audio = document.getElementById(id);
+                audio.play();
+                document.addEventListener("WeixinJSBridgeReady", function () {
+                    audio.play();
+                }, false);
+                document.addEventListener('YixinJSBridgeReady', function() {
+                    audio.play();
+                }, false);
+            }
+        audioAutoPlay('Jaudio');
+        </script>
 <!-- <audio style="margin-top: 5%; margin-left: 10%;" controls="controls" autoplay="autoplay">
   <source src="js/bgm.mp3" type="audio/mpeg" />
 </audio> -->
