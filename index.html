@@ -15,12 +15,18 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/garden.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
-
+<script type="text/javascript">
+	function a(){
+var audio = document.getElementById('ms'); 
+audio.play();
+alert(audio.play());
+}
+</script>
 </head>
 
-<body>
+<body onload="a()">
 	
-<audio style="margin-top: 5%; margin-left: 10%;" controls="controls" autoplay="autoplay">
+<audio id="ms" style="margin-top: 5%; margin-left: 10%;" controls="controls" autoplay="autoplay">
   <source src="bgm.mp3" type="audio/mpeg" />
 </audio>
 
