@@ -19,24 +19,9 @@
 </head>
 
 <body>
-<audio src="js/bgm.mp3" id="Jaudio" class="media-audio" autoplay preload loop="loop"></audio>
-        </div>
-        <script type="text/javascript">
-            function audioAutoPlay(id){
-                var audio = document.getElementById(id);
-                audio.play();
-                document.addEventListener("WeixinJSBridgeReady", function () {
-                    audio.play();
-                }, false);
-                document.addEventListener('YixinJSBridgeReady', function() {
-                    audio.play();
-                }, false);
-            }
-        audioAutoPlay('Jaudio');
-        </script>
-<!-- <audio style="margin-top: 5%; margin-left: 10%;" controls="controls" autoplay="autoplay">
+<audio style="margin-top: 5%; margin-left: 10%;" controls="controls" autoplay="autoplay">
   <source src="js/bgm.mp3" type="audio/mpeg" />
-</audio> -->
+</audio>
 <div id="mainDiv">
 	<div id="content">
 		<div id="code">
